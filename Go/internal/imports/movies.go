@@ -25,6 +25,7 @@ func ImportMovie() {
 
 	reader := csv.NewReader(file)
 
+	// this is what is usually call a gambiarra, in order to simulate a do while behavior
 	for ok := true; ok; ok = ok != false {
 
 		row, err := reader.Read()
