@@ -27,4 +27,6 @@ func InitDatabase() {
 	db = database
 
 	db.AutoMigrate(models.Movie{})
+	db.AutoMigrate(models.User{})
+	db.AutoMigrate(models.Recommendation{})
 }
