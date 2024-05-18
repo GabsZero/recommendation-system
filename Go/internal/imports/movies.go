@@ -1,8 +1,7 @@
-package importmovies
+package imports
 
 import (
 	"encoding/csv"
-	"fmt"
 	"os"
 	"strconv"
 	"time"
@@ -14,7 +13,6 @@ import (
 func ImportMovie() {
 	moviesCount := infra.CountMovies()
 
-	fmt.Println(moviesCount)
 	if moviesCount > 0 {
 		return
 	}
