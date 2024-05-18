@@ -1,7 +1,7 @@
 package main
 
 import (
-	importmovies "github.com/gabszero/recommendation-system-go/internal/import_movies"
+	"github.com/gabszero/recommendation-system-go/internal/imports"
 	"github.com/gabszero/recommendation-system-go/internal/infra"
 	"github.com/joho/godotenv"
 )
@@ -11,7 +11,8 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	infra.InitDatabase()
 
-	importmovies.ImportMovie()
+	infra.InitDatabase()
+	imports.ImportMovie()
+	imports.ImportUsers()
 }
