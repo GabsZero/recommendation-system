@@ -8,10 +8,8 @@ func SaveMovie(movie *models.Movie) {
 
 func CountMovies() int64 {
 	var count int64
-	print("maoe")
 	db.Model(models.Movie{}).Count(&count)
 
-	print("mamama")
 	return count
 
 }
