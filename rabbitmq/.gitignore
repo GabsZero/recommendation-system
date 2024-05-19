@@ -76,8 +76,11 @@ rebar3.crashdump
 
 /logs/
 /genhtml/
+/mnesia/
+
 
 /topic-branch-scratch/
+.erlang.cookie
 
 PACKAGES/
 packaging/docker-image/rabbitmq_server-*/
