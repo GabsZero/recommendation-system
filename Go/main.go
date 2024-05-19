@@ -3,6 +3,7 @@ package main
 import (
 	"github.com/gabszero/recommendation-system-go/internal/imports"
 	"github.com/gabszero/recommendation-system-go/internal/infra"
+	"github.com/gabszero/recommendation-system-go/internal/routes"
 	"github.com/joho/godotenv"
 )
 
@@ -15,4 +16,6 @@ func main() {
 	infra.InitDatabase()
 	imports.ImportMovie()
 	imports.ImportUsers()
+
+	routes.InitRoutes()
 }
