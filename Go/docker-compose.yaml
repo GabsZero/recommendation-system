@@ -1,0 +1,22 @@
+version: "3.9"
+services:
+  app:
+    container_name: recommendation_app-1
+    networks:
+      - database_masterNetwork
+    environment:
+      - RECOMMENDATION_SYSTEM_HOST_PORT=8080
+    build:
+      dockerfile: Dockerfile
+      context: .
+      target: dev
+    volumes:
+      - .:/opt/app/api
+    tty: true
+    ports:
+      - "8080:8080"
+
+
+networks:
+  database_masterNetwork:
+    external: true
