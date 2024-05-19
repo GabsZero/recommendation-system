@@ -12,3 +12,20 @@ func CountUsers() int64 {
 
 	return count
 }
+
+func SaveMovieWatched(userId uint, movieId uint) {
+	user := FindUser(userId)
+	movie := FindMovie(movieId)
+
+	db.Model(&user).Association("Movies").Append(&movie)
+
+}
+
+func FindUser(userId uint) models.User {
+	user := models.User{
+		ID: userId,
+	}
+	db.Find(&user)
+
+	return user
+}

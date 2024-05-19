@@ -13,3 +13,13 @@ func CountMovies() int64 {
 	return count
 
 }
+
+func FindMovie(movieId uint) models.Movie {
+	id := uint64(movieId)
+	movie := models.Movie{
+		Id: id,
+	}
+	db.Find(&movie)
+
+	return movie
+}
