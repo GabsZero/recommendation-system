@@ -10,7 +10,7 @@ def callback(ch, method, properties, body):
 def main():
     print("connection to rabbitmq")
     connection = pika.BlockingConnection(
-        pika.ConnectionParameters(host="localhost"),
+        pika.ConnectionParameters(host="rabbitmq"),
     )
     print("connected")
     channel = connection.channel()

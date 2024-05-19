@@ -9,6 +9,7 @@ services:
         - database_masterNetwork
     volumes:
       - .:/code
+    tty: true
 
 
 networks:
