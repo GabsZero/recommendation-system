@@ -1,0 +1,18 @@
+version: '3.9'
+services:
+  rabbitmq:
+    image: rabbitmq:latest
+    container_name: 'rabbitmq'
+    ports:
+        - 5672:5672
+        - 15672:15672
+    volumes:
+        - ./:/var/lib/rabbitmq/
+        - ./logs/:/var/log/rabbitmq
+    networks:
+        - database_masterNetwork
+
+
+networks:
+  database_masterNetwork:
+    external: true
