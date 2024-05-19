@@ -1,0 +1,16 @@
+services:
+  web:
+    container_name: python-1
+    build: 
+      dockerfile: dockerfile
+    ports:
+      - "8000:5000"
+    networks:
+        - database_masterNetwork
+    volumes:
+      - .:/code
+
+
+networks:
+  database_masterNetwork:
+    external: true
